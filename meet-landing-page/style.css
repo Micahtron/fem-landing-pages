@@ -1,0 +1,80 @@
+:root {
+  --teal: hsl(192, 37%, 48%);
+  --violet: hsl(268, 34%, 53%);
+  --dark: hsl(240, 21%, 20%);
+  --silver: hsl(240, 10%, 57%);
+  --paleBlue: hsl(192, 90%, 77%);
+  --paleViolet: hsl(268, 100%, 86%);
+  --white: hsl(0, 0%, 98%);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+/* --- Buttons ------------ */
+.btn {
+  font-size: 1rem;
+  color: var(--white);
+  transition: opacity 0.3s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn_1 {
+  background: var(--teal);
+  color: var(--white);
+}
+.btn_1 span {
+  color: var(--paleBlue);
+}
+
+.btn_2 {
+  background: var(--teal);
+}
+.btn_2 span {
+  color: var(--paleViolet);
+}
+
+/* --- Headings ------------ */
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 2.75;
+}
+
+.overline {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.625;
+  letter-spacing: 0.25rem;
+  color: var(--teal);
+}
+
+.page {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: var(--silver);
+}
