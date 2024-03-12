@@ -16,6 +16,7 @@ body {
   font-weight: 300;
   color: $grayishBlue;
   min-height: 300vh;
+  overflow-x: hidden;
 
   @include breakpoint-up(large){
     font-size: $font-med
@@ -129,8 +130,9 @@ a, a:visited, a:hover {
 
 // === BUTTON styles ============
 button, .button {
+  position: relative;
   display: inline-block;
-  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  background-image: linear-gradient(to right, $limeGreen, $brightCyan);
   padding: 0.875rem 2.1875rem;
   border: 0;
   border-radius: 50px;
@@ -140,9 +142,26 @@ button, .button {
   font-size: $font-sm;
   color: $white;
   transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 
   &:hover {
-    opacity: 0.7;
+    // opacity: 0.7;
   }
 }
 
